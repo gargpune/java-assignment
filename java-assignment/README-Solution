@@ -1,0 +1,23 @@
+The solution is implemented using SpringBoot and exposed as RESTful API.
+
+/src/main/java/com/leonardo/Application.java: To start application.
+
+URL's to access City Resource, default port to access end points is 8081.
+	1. GET All cities : /city 
+	2. GET city by Id : /city/{id}
+	3. POST, create city: /city with JSON request
+	4. PUT, to update city: /city/{id} with new request as a body
+	5. DELTE, delete city : /city/{id}
+	6. Calculate distance : /city/{from}/distance?to={to}
+		it will display city name, if both cities exist, else will print id only. 
+	
+Classes & interfaces used.
+- /src/main/java/com/leonardo/Application.java: Main class to start the application.
+- /src/main/java/com/leonardo/resource/CityResource: Restful API class, defines all end points to access API.
+- /src/main/java/com/leonardo/service/CityService.java: Service interface to perform operation on City resource.
+- /src/main/java/com/leonardo/service/CityServiceImpl.java: Implementation of CityService interface.
+- /src/test/java/com/leonardo/service/CityServiceImplTest.java: Unit tests for service implementation.
+
+Assumptions:
+1. City.java class is used, no separate DTO is created.
+2. Data exceptions and validations are not handle, it can be done at both application and code exception. 
